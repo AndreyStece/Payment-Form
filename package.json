@@ -1,0 +1,22 @@
+{
+  "name": "online-payment",
+  "version": "1.0.0",
+  "description": "*При выполнении задания вам понадобится npm и система сборки. Вы можете взять parcel или попробовать любую другую систему, если сможете в ней разобраться.*",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "parcel index.html",
+    "build": "parcel build index.html"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "parcel": "^2.12.0"
+  },
+  "dependencies": {
+    "card-validator": "^10.0.0",
+    "inputmask": "^5.0.9",
+    "redom": "^4.1.5",
+    "validator": "^13.12.0"
+  }
+}

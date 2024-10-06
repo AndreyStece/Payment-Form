@@ -1,0 +1,88 @@
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+    box-sizing: inherit;
+}
+
+.input-icon {
+    position: relative;
+}
+
+.input-icon::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 12px;
+    width: 48px;
+    height: 100%;
+    background-position: center center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    animation-duration: .2s;
+    animation-fill-mode: forwards;
+    transition: background-image .3s ease-in-out;
+}
+
+.input-icon.input_icon_show::after {
+    animation-name: showIcon;
+}
+
+.input-icon.input_icon_close::after {
+    animation-name: closeIcon;
+}
+
+.input-icon.input_maestro::after {
+    background-image: url('./icons/maestro.svg');
+}
+
+.input-icon.input_master_card_SC::after {
+    background-image: url('./icons/master card SC.svg');
+}
+
+.input-icon.input_mastercard::after {
+    background-image: url('./icons/master card.svg');
+}
+
+.input-icon.input_mir::after {
+    background-image: url('./icons/mir.svg');
+}
+
+.input-icon.input_paypal::after {
+    background-image: url('./icons/paypal.svg');
+}
+
+.input-icon.input_robokassa::after {
+    background-image: url('./icons/robokassa.svg');
+}
+
+.input-icon.input_verified_visa::after {
+    background-image: url('./icons/verified visa.svg');
+}
+
+.input-icon.input_visa::after {
+    background-image: url('./icons/visa.svg');
+}
+
+@keyframes showIcon {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes closeIcon {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
+}
